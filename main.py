@@ -21,7 +21,6 @@ SECRET_ID = os.environ.get("SECRET_ID")
 
 
 def create_token():
-    """Function that handles authenticating to Prisma Access and retrieving the token."""
     auth_url = f"{BASE_AUTH_URL}?grant_type=client_credentials&scope:tsg_id:{TSG_ID}"
 
     token = requests.request(
